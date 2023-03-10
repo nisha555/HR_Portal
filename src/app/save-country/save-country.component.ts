@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../country.service';
 
 @Component({
   selector: 'app-save-country',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaveCountryComponent implements OnInit {
 
-  constructor(){}
+  constructor(private countryService:CountryService){}
 
   public user = {
     country_short_name :'',
@@ -17,7 +18,25 @@ export class SaveCountryComponent implements OnInit {
   ngOnInit(): void {}
   formSubmit()
   {
-          alert('submit');
+          console.log(this.user);
+          if(this.user.country_short_name==''||this.user.country_short_name==null){
+            alert('country is required !! ');
+            return;
+          }
+
+          this.countryService.addUser(this.user).subscribe(
+            (data)=>{
+              console.log(data);
+              alert('success');
+
+            },
+            (error)=>{
+              console.log(error);
+              alert('something went wrong');
+
+            }
+            )
+          
   }
 
 }

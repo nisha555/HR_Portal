@@ -4,14 +4,20 @@
 
 
 <form (ngSubmit)="formSubmit()">
+    
     <label>Add New Country</label> &nbsp;
- 
+    
+        
   <input type="text" [(ngModel)]="user.country_short_name" name="country_short_name" value="country_short_name">&nbsp;
-  
+
+
+
+    
   <input type="text" [(ngModel)]="user.country_name" name="country_name" value="country_name" >&nbsp;
-  
+
   <button type="submit">Add</button>
 </form>
+
 
 </body>
 </html>

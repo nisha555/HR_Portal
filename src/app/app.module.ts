@@ -5,16 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { countryComponent } from './country/country.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistrationComponent } from './registration/registration.component';
-import { UserRegistrationService } from './user-registration.service';
 import { FormsModule } from '@angular/forms';
+import { SaveCountryComponent } from './save-country/save-country.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     countryComponent,
-    RegistrationComponent
+    SaveCountryComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserRegistrationService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

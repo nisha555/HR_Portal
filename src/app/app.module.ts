@@ -7,13 +7,15 @@ import { countryComponent } from './country/country.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SaveCountryComponent } from './save-country/save-country.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     countryComponent,
-    SaveCountryComponent
+    SaveCountryComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

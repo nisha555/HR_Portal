@@ -20,7 +20,10 @@
         
         </style>
 <div class="container">
-    <h3>List Of Country</h3>
+    <label>List Of Country</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="search here" [(ngModel)]="searchText">
+    <button>search</button>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -33,10 +36,10 @@
             
         </thead>
         <tbody>
-            <tr *ngFor="let country of countries">
+            <tr *ngFor="let country of countries | search: searchText">
                 <th>{{country.country_short_name}}</th>
                 <th>{{country.country_name}}</th>
-                <th> <link rel="stylesheet" href=""></th>
+                <th> Update</th>
                 <th><link rel="stylesheet" href=""></th>
 
             </tr>

@@ -9,15 +9,17 @@ import { Component , OnInit} from '@angular/core';
 export class countryComponent implements OnInit {
 
   countries:any;
+  CountryService: any;
+ 
 
   constructor( private http: HttpClient) {}
 
   ngOnInit() {
     let response =this.http.get("http://localhost:8080/getallcountries");
     response.subscribe((data)=>this.countries=data);
-
+  }
     
   }
 
+  
 
-}

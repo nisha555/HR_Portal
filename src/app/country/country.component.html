@@ -37,10 +37,10 @@
         </thead>
         <tbody>
             <tr *ngFor="let country of countries | search: searchText">
-                <th>{{country.country_short_name}}</th>
-                <th>{{country.country_name}}</th>
-                <th> Update</th>
-                <th><link rel="stylesheet" href=""></th>
+                <td>{{country.country_short_name}}</td>
+                <td>{{country.country_name}}</td>
+                <td> <button >Update</button></td>
+                <td><button (click) ="deleteCountry(country.country_id)"> Delete</button></td>
 
             </tr>
         </tbody>
